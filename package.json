@@ -1,0 +1,12 @@
+{
+  "name": "hacker-rank-js-tools",
+  "version": "0.0.0",
+  "description": "Tools to handle the business of IO for HackerRank challenges in JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Rafael Espinoza <rafael@rafaelespinoza.com> (www.rafaelespinoza.com)",
+  "license": "ISC"
+}
