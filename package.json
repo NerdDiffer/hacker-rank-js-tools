@@ -10,6 +10,7 @@
   "author": "Rafael Espinoza <rafael@rafaelespinoza.com> (www.rafaelespinoza.com)",
   "license": "ISC",
   "dependencies": {
+    "inquirer": "^3.0.1",
     "multistream": "^2.1.0"
   }
 }
