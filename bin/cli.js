@@ -1,13 +1,8 @@
 #! /usr/bin/env node
 const path = require('path');
 const inquirer = require('inquirer');
-const build = require('../lib/build/index.js');
+const { build, FILES } = require('../lib/build/index.js');
 
-const BUILD_FILES_DIR = path.join(__dirname, '../lib/build');
-const BUILD_FILES = {
-  io:       BUILD_FILES_DIR + '/io.js',
-  template: BUILD_FILES_DIR + '/template.js'
-};
 const TASKS = [
   'Set up boilerplate for new challenge',
   'Add IO handling for some code I already have'
@@ -50,9 +45,9 @@ inquirer.prompt(questions)
     const res = {};
 
     if (answers.task_name === TASKS[0]) {
-      res.inputFiles = [BUILD_FILES.io, BUILD_FILES.template];
+      res.inputFiles = [FILES.io, FILES.template, FILES.handleInput];
     } else {
-      res.inputFiles = [BUILD_FILES.io, answers.path_to_input, BUILD_FILES.template];
+      res.inputFiles = [FILES.io, answers.path_to_input, FILES.handleInput];
     }
 
     if (!answers.output) {
