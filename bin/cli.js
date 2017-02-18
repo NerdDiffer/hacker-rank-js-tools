@@ -7,7 +7,7 @@ const TASKS = [
   'Set up boilerplate for new challenge',
   'Add IO handling for some code I already have'
 ];
-const OUTPUTS = ['process.stdout', 'file'];
+const OUTPUTS = ['file', 'process.stdout'];
 
 const questions = [
   {
@@ -36,7 +36,7 @@ const questions = [
     message: 'Type in the relative path you want to write your output file',
     type: 'input',
     filter: input => path.join(process.cwd(), input),
-    when: answers => answers.output !== OUTPUTS[0],
+    when: answers => answers.output === OUTPUTS[0],
   },
 ];
 
