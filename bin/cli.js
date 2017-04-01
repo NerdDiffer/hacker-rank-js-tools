@@ -44,10 +44,12 @@ inquirer.prompt(questions)
   .then(answers => {
     const res = {};
 
+    res.inputFiles = [FILES.io, FILES.handleInput];
+
     if (answers.task_name === TASKS[0]) {
-      res.inputFiles = [FILES.io, FILES.template, FILES.handleInput];
+      res.inputFiles.push(FILES.template);
     } else {
-      res.inputFiles = [FILES.io, answers.path_to_input, FILES.handleInput];
+      res.inputFiles.push(answers.path_to_input);
     }
 
     if (!answers.output) {
